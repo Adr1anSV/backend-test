@@ -16,10 +16,10 @@ exports.UserController = {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const users = yield user_1.UserService.getAllUsers();
-                res.json({ users });
+                res.json(users);
             }
             catch (error) {
-                res.json({ error });
+                res.json(error);
             }
         });
     },
@@ -28,10 +28,10 @@ exports.UserController = {
             try {
                 const { name, email } = req.body;
                 const user = yield user_1.UserService.createUser(name, email);
-                res.json({ user });
+                res.json(user);
             }
             catch (error) {
-                res.json({ error });
+                res.json(error);
             }
         });
     },

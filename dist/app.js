@@ -8,4 +8,4 @@ const express_1 = __importDefault(require("express"));
 const user_1 = require("./routes/user");
 exports.app = (0, express_1.default)();
 exports.app.use(express_1.default.json());
-exports.app.use('/api', user_1.userRoutes);
+exports.app.use(user_1.userRoutes);
